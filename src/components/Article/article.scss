@@ -1,0 +1,40 @@
+.article-container{
+  img{
+    height: 350px;
+  }
+  .title-edit{
+    h3{
+      display: inline-block;
+      margin-bottom: 0;
+    }
+    input{
+      height: 50px;
+      width: 70%;
+    }
+  }
+  .article-content{
+    margin-top: 30px;
+    textarea{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .edit-actions{
+    text-decoration: underline;
+    cursor: pointer;
+    color: grey;
+    font-size: 15px;
+    font-weight: 800;
+  }
+  span.edit-actions{
+    margin-left: 15px;
+  }
+  .author-date{
+    margin: 20px 0;
+    p{
+      margin: 0;
+      color: grey;
+      font-size: 12px;
+    }
+  }
+}

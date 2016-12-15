@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
+import {getArticles} from './Feed/feedActions'
 import './app.scss'
 
 export class App extends React.Component {
@@ -9,10 +10,14 @@ export class App extends React.Component {
     super(props)
   }
 
+  componentWillMount () {
+    this.props.getArticles()
+  }
+
   render () {
     return (
       <div className='container'>
-        <h1>Hello World</h1>
+        {this.props.children}
       </div>
     )
   }
@@ -24,5 +29,5 @@ function mapStateToProps(state = {}) {
 
 export default connect(
   mapStateToProps,
-  {}
+  {getArticles}
 )(App)

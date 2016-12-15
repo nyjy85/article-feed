@@ -1,11 +1,12 @@
 import { fromJS } from 'immutable'
 
-export const initialArticlesState = fromJS({
-  isLoading: false
+export const initialfeedState = fromJS({
+  isLoading: false,
+  articles: {}
 })
 
 export const initialState = {
-	articles: initialArticlesState
+	feed: initialfeedState
 }
 
 export default initialState

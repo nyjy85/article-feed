@@ -3,7 +3,7 @@ import createLogger from 'redux-logger'
 import { Map } from 'immutable'
 import { apiMiddleware } from 'redux-api-middleware'
 
-// import dataProcessingMiddleware from './utils/dataProcessingMiddleware'
+import feedReducer from './components/Feed/feedReducer'
 
 const stateTransformer = (state) => {
   return Map(state).toJS();
@@ -13,8 +13,7 @@ const loggerMiddleware = createLogger({
 })
 
 const reducer = combineReducers({
-  // zipcodes: zipcodeReducer,
-  // map: mapReducer
+  feed: feedReducer
 })
 
 
@@ -24,8 +23,7 @@ export default function configureStore(initialState) {
     initialState,
     applyMiddleware(
       apiMiddleware,
-      loggerMiddleware,
-      // dataProcessingMiddleware
+      loggerMiddleware
     ),
     window.devToolsExtension ? window.devToolsExtension() : f => f
   )

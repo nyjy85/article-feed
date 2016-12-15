@@ -1,0 +1,17 @@
+.feed-module{
+  width: 50%;
+  .article-summary-module{
+    border-bottom: 1px solid black;
+    margin-top: 15px;
+  }
+  .article-summary-title{
+    cursor: pointer;
+  }
+  .article-summary-title:hover{
+    color: grey;
+  }
+  .article-summary-img{
+    height: 250px;
+    width: 250px;
+  }
+}
